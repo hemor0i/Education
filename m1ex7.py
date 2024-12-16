@@ -11,6 +11,6 @@ for i in range(len(grades)):
     # Найдем среднее арифметическое
     arith_mean = sum(grades[i]) / len(grades[i])
     print(arith_mean)
-    # Создадим словарь, добавляя итерационно элементы
+    # Создадим словарь, добавляя в него итерационно элементы
     dictionary[students[i]] =  arith_mean
 print (dictionary)
