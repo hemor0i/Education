@@ -11,17 +11,17 @@ def string_info(string):
 
 
 def is_contains(string, list_to_search):
-    count_calls()  # Вызываем функцию, чтобы прибавить 1 в calls
+    count_calls()   # Вызываем функцию, чтобы прибавить 1 в calls
     string = string.lower()  # Приводим строку в нижний регистр
     for i in range(len(list_to_search)):
         list_to_search[i] = list_to_search[i].lower()  # Цикл для приведения строк в списке в нижний регистр
-    if string in list_to_search:  # Поиск строки в списке и вывод
-        return True
-    else:
-        return False
+        if string == list_to_search[i]:  # Поиск строки в списке и вывод
+            return True
 
+    return False
 
-calls = 0  # Объявляем глобальную переменную
+calls = 0       # Объявляем глобальные переменные
+
 # Дальше вызываем как в примере задачи для проверки
 print(string_info('Capybara'))
 print(string_info('Armageddon'))
@@ -43,8 +43,7 @@ while True:
     list_to_search = []     # Определяем список в котором будем искать
     for i in range(int(input('Введите количество элементов в списке: '))):  # Определяем количество итераций
         item = input(f'Введите {i + 1} элемент списка: ')   # Вводим i-тый элемент списка
-        list_to_search.append(item)     # Добавляем в список элемент
-    print(list_to_search)           # Выводим весь список
-    print(is_contains(string, list_to_search))      #
+        list_to_search.append(item)                 # Добавляем в список элемент
+    print(list_to_search)                           # Выводим весь список для личного удобства
     print(is_contains(string, list_to_search))      # Вызов функции is_contains
-print(calls)            # Отображение количества вызовов функций string_info и is_contains
+print(f'Было совершено вызовов функций: {calls}')                           # Отображение количества вызовов функций string_info и is_contains
