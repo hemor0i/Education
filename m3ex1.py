@@ -46,4 +46,4 @@ while True:
         list_to_search.append(item)                 # Добавляем в список элемент
     print(list_to_search)                           # Выводим весь список для личного удобства
     print(is_contains(string, list_to_search))      # Вызов функции is_contains
-print(f'Было совершено вызовов функций: {calls}')                           # Отображение количества вызовов функций string_info и is_contains
+print(f'Было совершено вызовов функций: {calls}')   # Отображение количества вызовов функций string_info и is_contains
