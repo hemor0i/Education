@@ -1,8 +1,8 @@
 # Задача "Рассылка писем":
 def send_email(message, recipient, sender="university.help@gmail.com"):
-    exceptions = ['.com', '.ru', '.net']
-    if (('@' not in sender) or ('@' not in recipient)
-        or not any(sender.endswith(i) for i in exceptions)
+    exceptions = ['.com', '.ru', '.net']    # Добавляем рабочие домены
+    if (('@' not in sender) or ('@' not in recipient)   # Если нет @, то отправка не возможна
+        or not any(sender.endswith(i) for i in exceptions)      # Если домен почты не сопадает с доментами в списке
         or not any(recipient.endswith(i) for i in exceptions)):
         print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
     elif sender == recipient:
